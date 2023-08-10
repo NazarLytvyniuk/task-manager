@@ -17,7 +17,7 @@ class TaskType(models.Model):
 
 
 class Worker(AbstractUser):
-    position = models.ForeignKey(to=TaskType, on_delete=models.CASCADE,)
+    position = models.ForeignKey(to=Position, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "worker"
@@ -42,3 +42,6 @@ class Task(models.Model):
     )
     task_type = models.ForeignKey(to=TaskType, on_delete=models.CASCADE)
     assignees = models.ManyToManyField(to=Worker, related_name="tasks")
+
+    def __str__(self) -> str:
+        return self.name
