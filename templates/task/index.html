@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <main id="top">
+
+    <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-8 col-12 mx-auto">
+            <h1 class="text-white text-center">Task Manager</h1>
+
+            <h6 class="text-center">Empower your potential by taking on tasks and contributing your expertise</h6>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="featured-section">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+            <div class="custom-block bg-white shadow-lg">
+              <a href="">
+                <div class="d-flex">
+                  <div>
+                    <h5 class="mb-2">Workers</h5>
+                  </div>
+
+                  <span class="badge bg-design rounded-pill ms-auto">{{ workers }}</span>
+                </div>
+
+                <img src="{% static 'images/topics/undraw_Remote_design_team_re_urdx.png' %}" class="custom-block-image img-fluid" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-12">
+            <div class="custom-block custom-block-overlay">
+              <div class="d-flex flex-column h-100">
+                <img src="{% static 'images/businesswoman-using-tablet-analysis.jpg' %}" class="custom-block-image img-fluid" alt="">
+
+                <div class="custom-block-overlay-text d-flex">
+                  <div>
+                    <h5 class="text-white mb-2">Tasks</h5>
+
+                    <p class="text-white"> Design tasks that intrigue and inspire, creating a space where others can showcase their technical aptitude.
+                      Your tasks are invitations to embark on a journey of exploration.
+                    </p>
+
+                    <a href="" class="btn custom-btn mt-2 mt-lg-3">See all</a>
+                  </div>
+
+                  <span class="badge bg-finance rounded-pill ms-auto">{{ tasks }}</span>
+                </div>
+
+                <div class="section-overlay"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+{% endblock %}
